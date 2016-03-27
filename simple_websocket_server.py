@@ -7,13 +7,13 @@ import tornado.web
 class WSHandler(tornado.websocket.WebSocketHandler):
     def open(self):
         print 'new connection'
-
+        
     def on_message(self, message):
         print 'message received %s' % message
         self.write_message(message)
-
+        
     def on_close(self):
-    	print 'connection closed'
+        print 'connection closed'
 
 
 application = tornado.web.Application([
