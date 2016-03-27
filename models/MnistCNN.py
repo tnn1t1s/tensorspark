@@ -18,7 +18,6 @@ def max_pool_2x2(x):
                          strides=[1, 2, 2, 1], padding='SAME')
 
 class MnistCNN(ParameterServerModel):
-
    def __init__(self):
       session = tf.InteractiveSession()
       x = tf.placeholder("float", shape=[None, 784], name='x')
