@@ -1,4 +1,4 @@
-import parameterwebsocketclient
+import ParameterWebSocketClient
 import pyspark
 from operator import add
 import threading
@@ -6,9 +6,9 @@ import tornado.web
 import tornado.ioloop
 import tornado.websocket
 import os
-import mnistdnn
-import higgsdnn
-import moleculardnn
+import MnistDNN
+import HiggsDNN
+import MolecularDNN
 import tensorflow as tf
 import time
 import random
