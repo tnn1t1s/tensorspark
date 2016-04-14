@@ -9,5 +9,5 @@ $ python tensorspark.py
 </pre>
 
 # How does it work?
-Distributed Tensorflow partitions the input data set using Sparks' Resilient Distributed Dataset partition method. For each iteration of the optimization, each spark worker gets a subset of the dataset, udates parameters by communicating to the parameter server. When an iteration is complete, the score is measured using parameters of the model and 'hot' data from the test set and the process is repeated. 
+Distributed Tensorflow partitions the input data set using Sparks' Resilient Distributed Datasets i.e  for each iteration of the optimization, each spark worker processes a subset of the dataset. The workers update parameters by communicating to the Parameter Server (synchronously for now, but really, do we care?). When an iteration is complete, the score is measured vs test data and the process is repeated. 
 
