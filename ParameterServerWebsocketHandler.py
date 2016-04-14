@@ -4,9 +4,6 @@ import tornado.web
 import tornado.ioloop
 import tornado.websocket
 import os
-import mnistdnn
-import higgsdnn
-import moleculardnn
 import tensorflow as tf
 import time
 import random
@@ -20,16 +17,16 @@ class ParameterServerWebsocketHandler(tornado.websocket.WebSocketHandler):
         with self.model.session.graph.as_default():
             self.saver = tf.train.Saver()
             self.local = threading.Lock()
-            super(ParameterServerWebsocketHandler,self).__init__(*args, **kawargs)
+            super(ParameterServerWebsocketHandler,self).__init__(*args, **kwargs)
 
     def open(self):
         self.send_parameters()
 
     def send_parameters(self):
-        self.lock.acquire()
+        #self.lock.acquire()
         parameters = self.model.get_parameters()
-        self.lock.release()
-        serialied = self.model.serialize(parameters)
+        #self.lock.release()
+        serialized = self.model.serialize(parameters)
         self.write_message(serialized, binary=True)
 
     def on_close(self):
