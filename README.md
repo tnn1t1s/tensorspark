@@ -8,4 +8,6 @@ zip pyfile.zip ./parameterwebsocketclient.py ./parameterservermodel.py ./mymodel
 ## Then, submit to spark using spark-submit
 spark-submit ..... --pyfiles ./pyfiles.zip ./tensorspark.py
 
+# hows it work?
+Distributed Tensorflow partitions the input data set using Sparks' Resilient Distributed Dataset partition method. For each iteration of the optimization, each spark worker gets a subset of the dataset, udates parameters by communicating to the parameter server. When an iteration is complete, the score is measured using parameters of the model and 'hot' data from the test set and the process is repeated. 
 
