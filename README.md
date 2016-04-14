@@ -1,6 +1,9 @@
-Distributed TensorFlow on Spark
-This was first presented at the 2016 Spark Summit East by Christopher Nguyen @ Adatao.
+Distributed TensorFlow on Spark.
+
+This work was presented at the 2016 Spark Summit East by Christopher Nguyen @ Adatao.
      - http://www.slideshare.net/arimoinc/distributed-tensorflow-scaling-googles-deep-learning-library-on-spark-58527889
+
+I've since taken it and done a cleanup and will run/publish tests in near future.
 
 # Running the Model
 <pre>
