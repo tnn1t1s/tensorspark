@@ -5,7 +5,10 @@ This work was presented at the 2016 Spark Summit East by Christopher Nguyen @ Ad
 
 I've since taken it and done a cleanup and will run/publish tests in near future.
 
-# Running the Model
+# Background
+At minimum, the TF tutorials are requisite
+    - https://www.tensorflow.org/versions/r0.7/tutorials/mnist/beginners/index.html
+# Running a Model
 <pre>
 $ source setup
 $ python tensorspark.py
